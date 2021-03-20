@@ -1,0 +1,23 @@
+<section class="container ">
+    <div class="container">
+        <form action="action_page.php" method="post">
+            <div class="imgcontainer">
+                <img src="../../assets/img/login.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Email ID</b></label>
+                <input type="text" [(ngModel)]="loginObj.uname" placeholder="Enter EmailId" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" [(ngModel)]="loginObj.psw" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" mat-raised-button (click)="sendData()">Login</button>
+                <a routerLink="signup"><button class="btn btn-success"  (click)="btnClick();"> Sign Up </button></a>              
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+</section>
+
+<app-footer></app-footer>
